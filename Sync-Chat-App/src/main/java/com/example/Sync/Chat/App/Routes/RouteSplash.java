@@ -7,6 +7,7 @@ public class RouteSplash {
 
     @GetMapping("/")
     public String splashPage(){
+        System.out.println("Splash Page Controller Invoked");
         return "splashPage";
     }
 
