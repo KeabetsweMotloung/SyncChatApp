@@ -2,13 +2,13 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Registration Page</title>
-    <link rel="stylesheet" type="text/css" href="/css/SplashScreen/registrationStyle.css">
+    <title>Login Page</title>
+    <link rel="stylesheet" type="text/css" href="/css/SplashScreen/loginStyle.css">
 
 </head>
 <body>
 <!-- Your registration page content goes here -->
-<h1>Registration Page</h1>
+<h1>Login Page</h1>
 
 <!--On submit, send form data to-->
 <!--<form action="/UserRepository.java" autocomplete="on">-->
@@ -19,20 +19,15 @@
     <label for="username">Enter your username:</label>
     <input type="text" id="username" name="username"><br>
 
-<!--    Password-->
+    <!--    Password-->
     <label for="pwd">Enter your password:</label>
     <input type="password" id="pwd" name="pwd" pattern="^(?=.*[A-Z])(?=.*[!@#$%^&*()_+{}\[\]:;<>,.?~\\-]).{6,8}$"
            title="Password must contain at least one uppercase letter and one symbol. It should be 6-8 characters long." required>
     <br>
 
 
-<!--    Submit button-->
-    <input type="submit" value="Sign Up">
-
-
-    <div class="container signin">
-        <p>Already have an account? <a href="#">Sign in</a>.</p>
-    </div>
+    <!--    Submit button-->
+    <input type="submit" value="Login">
 
 </form>
 </body>

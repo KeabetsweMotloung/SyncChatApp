@@ -39,7 +39,3 @@ input[type="submit"] {
     cursor: pointer;
     border-radius: 15px
 }
-.signin {
-  background-color: #f1f1f1;
-  text-align: center;
-}
