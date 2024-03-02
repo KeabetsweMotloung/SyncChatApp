@@ -22,7 +22,7 @@ public class RouteController {
     }
 
     @GetMapping("/error")
-    public String error() {
+    public String handleError() {
         return "error";
     }
 

@@ -10,4 +10,7 @@ public interface UserOperations {
     void joinChatRoom(String roomName);
     void leaveChatRoom(String roomName);
 
+    void registerUser(String name, String username);
+
+    OnlineUser getUserById(Long userId);
 }
