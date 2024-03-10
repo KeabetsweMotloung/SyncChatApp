@@ -1,10 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
-import NavigationBar from './components/NavigationBar';
+import MainContainer from './MainContainer';
 
 function App() {
   return (
-    <NavigationBar/>
+  <div>
+    <MainContainer />
+    </div>
     );
 };
 

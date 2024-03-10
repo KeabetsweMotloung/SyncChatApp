@@ -1,0 +1,24 @@
+/* SideBar.css */
+
+.sideBarView {
+  width: 250px;
+  background-color: #f0f0f0;
+  padding: 20px;
+  position: fixed;
+  top: 85px; /* Adjust the top position based on your header's height */
+  bottom: 0;
+  overflow-y: auto;
+}
+
+.viewHeader {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.viewSearch {
+  margin-bottom: 10px;
+}
+
+.viewLoadConversations {
+  /* Add your styles for the chat list here */
+}
