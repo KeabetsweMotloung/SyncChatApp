@@ -5,7 +5,7 @@ import SplashLogo from './Splash.png';  // Assuming Splash.png is in the 'compon
 function NavigationBar() {
   return (
     <div className="header">
-      <img className="logo" src={SplashLogo} alt="" />
+      
       <div className="header__left">
         <h2>SYNC CHAT</h2>
       </div>
