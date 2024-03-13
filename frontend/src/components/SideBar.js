@@ -1,11 +1,25 @@
 import React from 'react';
 import './SideBar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faSearch, faUser, faUsers } from '@fortawesome/free-solid-svg-icons';
+import { faUserPlus} from '@fortawesome/free-solid-svg-icons';
+
+
 
 function SideBar() {
   return (
     <div className='sideBarView'>
+
+
+    <div className='addGroup'>
+            <FontAwesomeIcon icon={faUsers} />
+          </div>
+
+          <div className='addContact'>
+              <FontAwesomeIcon icon={faUserPlus} />
+              </div>
+
+
       <div className="viewSearch">
         <FontAwesomeIcon icon={faSearch} />
         <div className="searchInput">
@@ -19,10 +33,20 @@ function SideBar() {
           <div className="icon">
             <FontAwesomeIcon icon={faUser} />
           </div>
+          Sync Bot
+        </div>
+
+        {/* Add more person containers as needed */}
+        <div className="personContainer">
+          <div className="icon">
+            <FontAwesomeIcon icon={faUser} />
+          </div>
           Palesa Gumede
         </div>
-        {/* Add more person containers as needed */}
       </div>
+
+      {/* Container for adding a group */}
+
     </div>
   );
 }

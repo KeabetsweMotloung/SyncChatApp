@@ -1,0 +1,17 @@
+.MessageBar{
+     border-radius: 20px;
+      border: 2px solid #ccc;
+      margin-top: 15px; /* Adjust the spacing between search and chat list */
+      padding: 10px;
+}
+
+.personContainer .icon {
+  margin-right: 10px; /* Adjust spacing between icon and name */
+  border-radius: 50%; /* Make the icon border circular */
+  padding: 8px; /* Adjust the padding for the circular border */
+  background-color: #ccc; /* Set background color for the circular border */
+}
+
+.personContainer:hover {
+  background-color: #f5f5f5; /* Change background color on hover */
+}
