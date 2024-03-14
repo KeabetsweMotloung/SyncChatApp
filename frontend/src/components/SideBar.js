@@ -20,6 +20,11 @@ function SideBar() {
               </div>
 
 
+           <div className='viewProfile'>
+              <FontAwesomeIcon icon={faUser} />
+            </div>
+
+
       <div className="viewSearch">
         <FontAwesomeIcon icon={faSearch} />
         <div className="searchInput">

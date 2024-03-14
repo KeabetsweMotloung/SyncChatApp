@@ -1,24 +1,20 @@
 /* SyncHeader.css */
-
 .header {
-
   position: fixed;
   top: 0;
   width: 100%;
-  display:flex;
+  display: flex;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   background-color: #3498db; /* Navbar background color */
   padding: 10px;
-  display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px; /* Adjust the padding as needed */
   z-index: 1000;
 }
 
-.header__left h2{
+.header__left h2 {
   font-family: 'Roboto', sans-serif;
-  font-weight:500;
+  font-weight: 500;
   display: flex;
   align-items: center;
 }
@@ -34,4 +30,7 @@
   color: #fff; /* Text color */
 }
 
-/* You can add more styles for other components in your header as needed */
+/* Add padding top for the MessageView */
+.MessageBar {
+  padding-top: 70px; /* Adjust this value based on the height of your NavigationBar */
+}
