@@ -10,7 +10,7 @@ function SideBar() {
   return (
     <div className='sideBarView'>
 
-
+    <div className='groupContainer'>
     <div className='addGroup'>
             <FontAwesomeIcon icon={faUsers} />
           </div>
@@ -22,6 +22,7 @@ function SideBar() {
 
            <div className='viewProfile'>
               <FontAwesomeIcon icon={faUser} />
+            </div>
             </div>
 
 
