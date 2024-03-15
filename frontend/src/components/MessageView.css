@@ -1,4 +1,4 @@
-/* MessageView.css */
+
 
 .MessageBar {
   display: flex;
@@ -8,20 +8,15 @@
 
 .chatHeader {
   background-color: #f0f0f0;
-  background-color: #ccc;
+
   padding: 90px; /* Add padding for better spacing */
 }
 
 .chatContainer {
-  background-color: white;
+  background-color: green;
   flex: 1;
-  padding: 400px; /* Add padding for better spacing */
+  padding: 400px;
   overflow-y: auto; /* Enable vertical scrolling if content overflows */
-}
-
-.chatInputContainer {
-  background-color: grey;
-  padding: 100px; /* Add padding for better spacing */
 }
 
 /* Target the FontAwesomeIcon directly */
@@ -55,3 +50,39 @@
   color: green;
   z-index: 1;
 }
+
+/* STYLES FOR CONVERSATION AREA */
+
+.chatContainer{
+flex:1;
+background-color:green;
+padding: 18px 10px;
+margin: 10px;
+border-radius:20px;
+}
+
+.chatInputContainer{
+position:fixed;
+bottom: 0;
+left:0;
+right:0;
+background-color:grey;
+padding: 30px 10px;
+display:flex;
+justify-content: space-between;
+align-items: center;
+background-color: #ccc;
+
+}
+.search-box {
+   width: 55%; 
+      margin-left: 330px;
+     font-size: 16px;
+     color: #000;
+     text-align: center; /* Center the text horizontally */
+
+}
+.send-icon {
+  margin-right: 10px; /* Adjust the margin for better spacing */
+}
+

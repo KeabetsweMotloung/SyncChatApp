@@ -2,6 +2,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPortrait} from '@fortawesome/free-solid-svg-icons';
+import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import './MessageView.css';
 
 function MessageView() {
@@ -17,8 +18,14 @@ const userName = "John Doe";
       </div>
 
 
-      <div className="chatContainer">Chat Container</div>
-      <div className="chatInputContainer">Chat Input</div>
+      <div className="chatContainer"></div>
+
+
+
+      <div className="chatInputContainer">
+       <input placeholder="Type a Message" className='search-box' />
+              <FontAwesomeIcon icon={faPaperPlane} className="send-icon" />
+      </div>
     </div>
   );
 }
