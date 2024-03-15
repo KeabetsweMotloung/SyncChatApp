@@ -4,6 +4,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPortrait} from '@fortawesome/free-solid-svg-icons';
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import './MessageView.css';
+import OtherUsersMessage from './OtherUsersMessage';
+import UserMessage from './UserMessage';
+
+
 
 function MessageView() {
 const userName = "John Doe";
@@ -18,7 +22,11 @@ const userName = "John Doe";
       </div>
 
 
-      <div className="chatContainer"></div>
+      <div className="chatContainer">
+      <OtherUsersMessage />
+      <UserMessage />
+      </div>
+
 
 
 

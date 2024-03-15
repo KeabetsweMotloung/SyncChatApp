@@ -75,7 +75,7 @@ background-color: #ccc;
 
 }
 .search-box {
-   width: 55%; 
+   width: 55%;
       margin-left: 330px;
      font-size: 16px;
      color: #000;
@@ -83,6 +83,7 @@ background-color: #ccc;
 
 }
 .send-icon {
-  margin-right: 10px; /* Adjust the margin for better spacing */
+  margin-right: 10px;
+  cursor:pointer;
 }
 

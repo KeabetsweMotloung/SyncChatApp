@@ -1,0 +1,29 @@
+.other-text-content{
+    background-color:red;
+    padding: 10px 10px;
+    margin: 5px;
+    border-radius:20px;
+    width: max-content;
+    margin-top:10px;
+    display:flex;
+    flex-direction: column;
+
+}
+
+.con-title{
+grid-area:1/2/2/4;
+font-weight:bold;
+color:rgba(0,0,0, 0.54);
+padding-left:10px;
+}
+
+.con-lastMessage{
+font-size:0.75rem;
+}
+
+.con-timeStamp{
+
+justify-self:flex-end;
+font-size:0.75rem;
+color:rgba(0,0,0, 0.54);
+}
