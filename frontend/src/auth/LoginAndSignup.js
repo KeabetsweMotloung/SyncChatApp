@@ -8,11 +8,19 @@ function LoginAndSignup() {
  const [action, setAction] = useState("Sign Up");
   return (
 
-    <div className='formContainer'>
-      <div className='header'>
-        <div className='text'>{action}</div>
-        <div className='underline'></div>
-      </div>
+    <div className='SyncContainer'>
+      <div className='nav'>
+        <p>Sync Chat</p>
+        </div>
+
+
+       <div className='formContainer'>
+            <div className='header'>
+              <div className='text'>{action}</div>
+              <div className='underline'></div>
+            </div>
+
+
       <div className='inputs'>
         <div className='name'>
           <FontAwesomeIcon icon={faUser} className='icon' />
@@ -43,6 +51,7 @@ function LoginAndSignup() {
         <div className={action==="Sign Up"?"submit gray":"submit"} onClick={()=>{setAction("Login")}}>Login</div>
       </div>
     </div>
+</div>
 
   );
 }
