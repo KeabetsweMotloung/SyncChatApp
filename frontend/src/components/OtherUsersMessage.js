@@ -15,7 +15,7 @@ function OtherUsersMessage() {
                         <p className='con-timeStamp'>12:00am</p>
                     </div>
                 </div>
-          
+
         </div>
     );
 }
