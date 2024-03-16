@@ -1,20 +1,38 @@
-.other-text-content{
-    background-color:red;
-    padding: 10px 10px;
-    margin: 5px;
-    border-radius:20px;
-    width: max-content;
-    margin-top:10px;
-    display:flex;
-    flex-direction: column;
+
+.OtherUsersMessage{
+
+    justify-content: flex-start;
+    margin-left: 300px; /* Push the element to the right */
+    border-radius: 50px;
 
 }
+.con-icon{
+    margin-right: 15px;
+      border-radius: 50%;
+      padding: 8px;
+      background-color: #ccc;
+}
 
-.con-title{
-grid-area:1/2/2/4;
-font-weight:bold;
-color:rgba(0,0,0, 0.54);
-padding-left:10px;
+
+
+/* ACTUAL MESSAGE  */
+.other-text-wrapper{
+     display:flex;
+        background-color: blue;
+        width: max-content;
+        padding: 10px 10px;
+        margin:5px;
+        border-radius: 20px;
+}
+
+
+
+
+.con-title {
+    grid-area: 1/2/2/4;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.54);
+    padding-left: 10px;
 }
 
 .con-lastMessage{
