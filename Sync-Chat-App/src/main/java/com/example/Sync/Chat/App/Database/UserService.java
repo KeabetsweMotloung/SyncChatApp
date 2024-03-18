@@ -10,10 +10,13 @@ public class UserService {
     @Autowired
     private UserRepository userRepository;
 
-    public void registerUser(String name, String username) {
+    public void registerUser(String name, String username, String password) {
         try {
             // Create a new user
-            OnlineUser newUser = OnlineUser.createUser(name, username);
+            OnlineUser newUser = new OnlineUser();
+            newUser.setName(name);
+            newUser.setUsername(username);
+            newUser.setPassword(password); // Set the password
 
             // Save the user to the database
             OnlineUser savedUser = userRepository.save(newUser);
@@ -26,6 +29,5 @@ public class UserService {
             // Handle the exception as needed (e.g., return an error response)
         }
     }
-
-    // Other user-related methods...
 }
+

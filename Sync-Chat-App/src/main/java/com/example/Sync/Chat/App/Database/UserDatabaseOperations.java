@@ -38,10 +38,11 @@ public class UserDatabaseOperations implements UserOperations {
     }
 
     @Override
-    public void registerUser(String name, String username) {
-        OnlineUser newUser = OnlineUser.createUser(name, username);
+    public void registerUser(String name, String username, String password) {
+        OnlineUser newUser = OnlineUser.createUser(name, username, password);
         userRepository.save(newUser);
     }
+
 
     @Override
     public OnlineUser getUserById(Long userId) {

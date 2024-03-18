@@ -40,7 +40,7 @@ public class RouteController {
     @PostMapping("/registration")
     public String registration(@RequestParam String name, @RequestParam String username, @RequestParam String pwd) {
 //        CREATE A NEW USER and save the user
-        OnlineUser newUser = OnlineUser.createUser(name,username);
+        OnlineUser newUser = OnlineUser.createUser(name,username,pwd);
         userRepository.save(newUser);
         return "chatRoom";
     }

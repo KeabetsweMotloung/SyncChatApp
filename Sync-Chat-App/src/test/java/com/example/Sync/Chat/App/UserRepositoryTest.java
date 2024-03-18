@@ -17,7 +17,7 @@ public class UserRepositoryTest {
     @Test
     public void testSaveUser() {
         // Create a new user
-        OnlineUser newUser = OnlineUser.createUser("John Doe", "john.doe");
+        OnlineUser newUser = OnlineUser.createUser("John Doe", "john.doe", "12345");
 
         // Save the user to the database
         OnlineUser savedUser = userRepository.save(newUser);

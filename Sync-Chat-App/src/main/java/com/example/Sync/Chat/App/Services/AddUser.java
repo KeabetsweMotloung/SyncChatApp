@@ -12,8 +12,8 @@ public class AddUser {
         this.userRepository = userRepository;
     }
 
-    public void registerUser(String name, String username){
-        OnlineUser newUser = OnlineUser.createUser(name, username);
+    public void registerUser(String name, String username, String password){
+        OnlineUser newUser = OnlineUser.createUser(name, username, password);
 
 //        save to the jpa repository
         userRepository.save(newUser);

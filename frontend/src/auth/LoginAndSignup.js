@@ -2,10 +2,31 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faKey } from '@fortawesome/free-solid-svg-icons';
 import './LoginAndSignup.css';
+import axios from 'axios'; // Import axios for making HTTP requests
 
 function LoginAndSignup() {
 
- const [action, setAction] = useState("Sign Up");
+    const [name, setName] = useState('');
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
+    const [action, setAction] = useState("Sign Up"); // Initial state for action
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        try {
+            const response = await axios.post('http://localhost:3001/api/users/register', {
+                name,
+                username,
+                password
+            });
+            console.log(response.data.message);
+            // Handle success (e.g., show a success message)
+        } catch (error) {
+        console.error('Error registering user:', error);
+            // Handle error (e.g., show an error message)
+        }
+    };
+
   return (
 
     <div className='SyncContainer'>
@@ -13,31 +34,27 @@ function LoginAndSignup() {
         <p>Sync Chat</p>
         </div>
 
-
+       <form onSubmit={handleSubmit}>
        <div className='formContainer'>
             <div className='header'>
               <div className='text'>{action}</div>
-              <div className='underline'></div>
             </div>
 
 
       <div className='inputs'>
         <div className='name'>
           <FontAwesomeIcon icon={faUser} className='icon' />
-          <input type="text" placeholder='Enter Your name' />
+          <input type="text" placeholder='Enter Your name' value={name} onChange={(e) => setName(e.target.value)} />
         </div>
         <div className='username'>
           <FontAwesomeIcon icon={faUser} className='icon' />
-          <input type="text" placeholder='Enter Your Username' />
+          <input type="text" placeholder='Enter Your Username' value={username} onChange={(e) => setUsername(e.target.value)} />
         </div>
+
         <div className='password'>
-          <FontAwesomeIcon icon={faKey} className='icon' />
-          <input type="password" placeholder='Enter Your Password'/>
-        </div>
-        {action==="Login"?<div></div>:<div className='validatePassword'>
-                                                  <FontAwesomeIcon icon={faKey} className='icon' />
-                                                  <input type="password" placeholder='Re-Enter Your Password'/>
-                                                </div>}
+            <FontAwesomeIcon icon={faKey} className='icon' />
+            <input type="password" placeholder='Enter Your Password' value={password} onChange={(e) => setPassword(e.target.value)} />
+          </div>
 
       </div>
 
@@ -47,11 +64,12 @@ function LoginAndSignup() {
 
 
       <div className='submitContainer'>
-        <div className={action==="Login"?"submit gray":"submit"} onClick={()=>{setAction("Sign Up")}}>Sign Up</div>
-        <div className={action==="Sign Up"?"submit gray":"submit"} onClick={()=>{setAction("Login")}}>Login</div>
-      </div>
-    </div>
-</div>
+                              <button type="submit" className={action === "Login" ? "submit gray" : "submit"} onClick={() => { setAction("Sign Up") }}>Sign Up</button>
+                              <button type="submit" className={action === "Sign Up" ? "submit gray" : "submit"} onClick={() => { setAction("Login") }}>Login</button>
+                          </div>
+                    </div>
+                     </form>
+                </div>
 
   );
 }
