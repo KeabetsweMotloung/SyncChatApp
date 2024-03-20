@@ -5,15 +5,22 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import LoginAndSignup from './auth/LoginAndSignup';
+import Signup from './auth/Signup';
+import Login from './auth/Login';
 import MainContainer from './MainContainer';
 
 /*CREATE SPECIFIC ROUTES */
 const router = createBrowserRouter([
     {
     path: '/',
-    element: <LoginAndSignup />
+    element: <Signup />
 
     },
+    {
+        path: '/login',
+        element: <Login />
+
+        },
     {
     path: '/main-container',
     element: <MainContainer />

@@ -10,6 +10,7 @@ function LoginAndSignup() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [action, setAction] = useState("Sign Up"); // Initial state for action
+     const [errorMessage, setErrorMessage] = useState('');
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -23,9 +24,11 @@ function LoginAndSignup() {
             // Handle success (e.g., show a success message)
         } catch (error) {
         console.error('Error registering user:', error);
+        setErrorMessage(error.response.data.message);
             // Handle error (e.g., show an error message)
         }
     };
+
 
   return (
 
@@ -69,9 +72,15 @@ function LoginAndSignup() {
                           </div>
                     </div>
                      </form>
-                </div>
 
-  );
+                      {/* Error message pop-up */}
+                                 {errorMessage && (
+                                     <div className="errorMessage">
+                                         {errorMessage}
+                                         <button onClick={() => setErrorMessage("Opps, looks like you're already a registered user, Login")}>Close</button>
+                                </div>
+  )}
+        </div>
+    );
 }
-
 export default LoginAndSignup;
