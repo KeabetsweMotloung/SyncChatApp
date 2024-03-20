@@ -3,11 +3,16 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faKey } from '@fortawesome/free-solid-svg-icons';
 import './LoginAndSignup.css';
 import axios from 'axios'; // Import axios for making HTTP requests
+import { useNavigate } from 'react-router-dom';
+
+
+
 
 function Login() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
+    const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -17,6 +22,9 @@ function Login() {
             password
             });
             console.log(response.data.message);
+            //Redirect to chat area if successful
+            navigate('/main-container');
+
         } catch (error) {
             console.error('Error logging in:', error);
             setErrorMessage(error.response.data.message);

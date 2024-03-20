@@ -3,13 +3,16 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faKey } from '@fortawesome/free-solid-svg-icons';
 import './LoginAndSignup.css';
 import axios from 'axios'; // Import axios for making HTTP requests
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+
+
 
 function Signup() {
     const [name, setName] = useState('');
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
+    const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -20,7 +23,9 @@ function Signup() {
                 password
             });
             console.log(response.data.message);
-            // Handle success (e.g., show a success message)
+            // Handle success
+            navigate('/main-container');
+
         } catch (error) {
             console.error('Error registering user:', error);
             setErrorMessage(error.response.data.message);
